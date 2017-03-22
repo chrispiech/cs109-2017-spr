@@ -1,0 +1,57 @@
+<head>
+
+    %include templates/parts/head.html
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    %include templates/parts/navBar.html
+
+    <div class="container">
+            
+        <!-- Header -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="pageHeader">
+                    <h1>
+                        Course Schedule
+                    </h1>
+                    
+
+                </div>
+                <hr/>
+            </div>
+        </div>
+                
+        <div class="row">
+            <div class="col-sm-12">
+                <p>
+                    The schedule is subject to change by the management at any time.
+                </p>
+                                
+                <p>
+                    %include templates/parts/schedule.html
+                </p>
+            </div>
+        </div>
+
+
+    
+
+        %include templates/parts/footer.html
+
+    </div>
+
+    <script type="text/javascript">
+        $( ".moment" ).each(function( i ) {
+            var date = $(this).html()
+
+            var fromStr = moment(date, "YYYYMMDD").fromNow()
+
+            $(this).html(fromStr)
+          });
+        //alert(moment("20160101", "YYYYMMDD").fromNow())
+    </script>
+
+</body>

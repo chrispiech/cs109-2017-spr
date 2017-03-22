@@ -1,0 +1,454 @@
+<head>
+
+<title>CS109</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+<link href="plugins/bootstrap-custom/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Java Script -->
+<script src="plugins/jquery.min.js"></script>
+<script src="plugins/moment.min.js"></script>
+<script src="plugins/bootstrap-custom/js/bootstrap.min.js"></script>
+<script src="plugins/ace/ace.js" type="text/javascript"></script>
+
+<!-- Probability Packages -->
+<script src="plugins/probability/gaussian.js"></script>
+<script src="plugins/color.js"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="">CS109</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+          </ul>
+        </li>-->
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lecture Notes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="pdfs/02 Counting.pdf">2 - Counting</a></li>
+            <li><a href="pdfs/03 CalculationRef.pdf">3 - Calculation Ref</a></li>
+            <li><a href="pdfs/05 Combinatorics.pdf">5 - Combinatorics</a></li>
+            <li><a href="pdfs/06 Probability.pdf">6 - Probability</a></li>
+            <li><a href="pdfs/07 CondProbability.pdf">7 - Conditional Probability</a></li>
+            <li><a href="pdfs/08 Independence.pdf">8 - Independence</a></li>
+            <li><a href="pdfs/10 Random Variables.pdf">10 - Random Variables</a></li>
+            <li><a href="pdfs/11 Variance.pdf">11 - Variance</a></li>
+            <li><a href="pdfs/12 Poisson.pdf">12 - Poisson and More</a></li>
+
+            <li><a href="pdfs/13 Continuous.pdf">13 - Continuous RV</a></li>
+            <li><a href="pdfs/16 Gaussian.pdf">16 - Gaussian</a></li>
+            <li><a href="pdfs/17 StandardNormalTable.pdf">17 - Standard Normal</a></li>
+            <li><a href="pdfs/18 Joint.pdf">18 - Joint Distributions</a></li>
+            <li><a href="pdfs/19 MoreJointProperties.pdf">19 - More Joint Properties</a></li>
+            <li><a href="pdfs/20 ConvolutionAndConditional.pdf">20 - Convolution and Conditional</a></li>
+            <li><a href="pdfs/22 Beta.pdf">22 - Beta Distributions</a></li>
+            <li><a href="pdfs/27 VarianceFromEvents.pdf">27 - Variance From Events</a></li>
+            <li><a href="pdfs/28 CovarianceAndSamples.pdf">28 - Covariance and Samples</a></li>
+            <li><a href="pdfs/29 Correlation.pdf">29 - Correlation</a></li>
+            <li><a href="pdfs/30 CondExpectation.pdf">30 - Conditional Expectation</a></li>
+            <li><a href="pdfs/31 CentralTheorems.pdf">31 - Central Theorems</a></li>
+            <li><a href="pdfs/34 ParameterEstimation.pdf">34 - Parameter Estimation</a></li>
+            <li><a href="pdfs/35 MaximumLikelihood.pdf">35 - Maximum Likelihood</a></li>
+            <li><a href="pdfs/37 MaximumAPosteriori.pdf">37 - Maximum A Posteriori</a></li>
+
+            <li><a href="pdfs/39 NaiveBayes.pdf">39 - Naive Bayes</a></li>
+
+            <li><a href="pdfs/40 LogisticRegression.pdf">40 - Logistic Regression</a></li>
+            <li><a href="pdfs/41 DeepLearning.pdf">41 - Deep Learning</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Problem Sets<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="pdfs/04 ProblemSet1.pdf">Problem Set 1</a></li>
+            <li><a href="pdfs/09 ProblemSet2.pdf">Problem Set 2</a></li>
+            <li><a href="pdfs/15 ProblemSet3.pdf">Problem Set 3</a></li>
+            <li><a href="pdfs/23 ProblemSet4.pdf">Problem Set 4</a></li>
+            <li><a href="pdfs/32 ProblemSet5.pdf">Problem Set 5</a></li>
+            <li><a href="pdfs/38 ProblemSet6.pdf">Problem Set 6</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <li><a href="pdfs/01 Administrivia.pdf">Administrivia</a></li>
+           <!--<li><a href="pdfs/01 Administrivia.pdf">Lecture Notes Errata</a></li>-->
+           <li><a href="pdfs/17 StandardNormalTable.pdf">Standard Normal (Phi)</a></li>
+           <li><a href="pdfs/21 PracticeMidterm.pdf">Practice Midterm</a></li>
+           <li><a href="pdfs/24 PracticeMidtermSoln.pdf">Practice Midterm Soln</a></li>
+           <li><a href="pdfs/26 MidtermReviewSession.pdf">Midterm Review Session</a></li>
+           <li><a href="pdfs/25 Notation.pdf">Notation Reference</a></li>
+           <li><a href="handouts/videoExamples.html">Video Examples</a></li>
+           <li><a href="problem12.html">Titanic Dataset</a></li>
+           <li><a href="handouts/datasets.html">Machine Learning Datasets</a></li>
+           <li><a href="pdfs/42 PracticeFinal.pdf">Practice Final</a></li>
+           <li><a href="pdfs/43 PracticeFinalSoln.pdf">Practice Final Soln</a></li>
+           <li><a href="handouts/extraProblems.html">Extra Practice Problems</a></li>
+           <!--<li><a href="pdfs/01 Administrivia.pdf">Midterm Info</a></li>-->
+
+          </ul>
+        </li>
+
+
+
+        
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Demos <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="demos/serendipity.html">Serendipity</a></li>
+            <li><a href="demos/naturalBayes.html">Medical Tests</a></li>
+            <li><a href="demos/jurors.html">Representative Juries</a></li>
+            <li><a href="demos/cdf.html">Normal Calculator</a></li>
+            <li><a href="demos/imageDist.html">CS109 Logo</a></li>
+            <li><a href="demos/beta.html">Beta</a></li>
+            <li><a href="demos/likelihood/">Likelihood</a></li>
+           <!--<li><a href=""><i>None yet!</i></a></li>-->
+
+          </ul>
+        </li>
+
+        <li><a href="handouts/staff.html">Office Hours</a></li>
+       
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/handouts/overview.html"><span class="glyphicon glyphicon-apple" aria-hidden="true"></span> Overview</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+	<div class="container" id="indexContainer">
+		<div style="">
+			<div class="row" id = "indexHead">
+
+
+					<div class="col-sm-12">
+						
+			        	<div id="logo">
+							<a href="demos/imageDist.html">
+								<img id="logoImg" src="img/home/logo-gen.png"></img>
+							</a>
+						</div>
+						<div id="headerText" style="padding-bottom:15px;">
+							<div id="title">
+								CS109: Intro to Probability for Computer Scientists
+							</div>
+							<div>
+								Spring 2017
+							</div>
+							<div>
+								Monday, Wednesday, Friday 10:30pm to 11:50am in <a href="https://www.google.com.my/maps/place/nvidia+auditorium/@37.4280569,-122.1777065,16.31z/data=!4m5!3m4!1s0x808fbb2ac97723cb:0xa6e8fc1a7a5f2c29!8m2!3d37.4277284!4d-122.1741965">NVIDIA Auditorium</a> 
+							</div>
+						</div>
+					</div>
+	        	</div>
+	        </div>
+
+        <div class="row">
+			<div class="col-sm-12">
+				<hr/>
+
+				<!--<div class="alert alert-success" role="info">We use socrative in class. During class go to <a href="https://b.socrative.com/login/student/">https://b.socrative.com/login/student/</a> and use the Room Name: <b>CS109SPR</b></div>-->
+
+				
+			</div>
+		</div>
+
+        
+        
+        <div class="row">
+
+			<div class="col-sm-3" id="infoCol">
+				<!-- Links -->
+				<div>
+					<p class="subtleHeading">RESOURCES</p>
+
+					<!--<span class="sidebaricon glyphicon glyphicon-user" aria-hidden="true"></span>
+					<a href="">Staff</a><br/>-->
+
+					<span class="sidebaricon glyphicon glyphicon-apple" aria-hidden="true"></span>
+					<a href="/schedule.html">Schedule</a> <br/>
+
+					<span class="sidebaricon glyphicon glyphicon-user" aria-hidden="true"></span>
+					<a href="/handouts/staff.html">Staff / Office Hours</a> <br/>
+
+					<img src="img/icons/piazza-icon.png" class="sidebaricon" alt="icon">
+					<a href="https://piazza.com/stanford/spring2016/cs109/home">Piazza</a> <br/>
+
+					
+					<!--<span class="sidebaricon glyphicon glyphicon-book" aria-hidden="true"></span>
+					<a href="">Text Book</a> <br/>-->
+
+				
+
+					<!--<span class="sidebaricon glyphicon glyphicon-backward" aria-hidden="true"></span>
+					<a href="/handouts/past.html">Past Quarters</a> <br/>-->
+
+
+					<img src="img/icons/socrative.png" class="sidebaricon" alt="icon">
+					<a href="https://b.socrative.com/login/student/">Socrative</a> <br/>
+
+					<!--<img src="img/icons/spotify.ico" class="sidebaricon" alt="icon">
+					<a href="https://play.spotify.com/user/1251835474/playlist/3O343f5rIdxCMofp8rCzcs?play=true&utm_source=open.spotify.com&utm_medium=open">Spotify Playlist</a> <br/>-->
+					
+					
+
+					
+
+					<!--<span class="sidebaricon glyphicon glyphicon-film" aria-hidden="true"></span>
+					<a href="">Videos</a> <br/>-->
+				</div>
+
+				<hr/>
+
+				<div>
+				<p class="subtleHeading">PROBLEM SETS</p>
+				
+					<!--<div class="well well-sm" style="margin-bottom:10px">
+						<a href="/assn/life.html">Problem Set 1</a>
+					</div>-->
+
+					<span class="sidebaricon glyphicon glyphicon-file" aria-hidden="true"></span>
+					<a href="pdfs/04 ProblemSet1.pdf"> Problem Set 1</a> <br/>
+
+					<span class="sidebaricon glyphicon glyphicon-file" aria-hidden="true"></span>
+					<a href="pdfs/09 ProblemSet2.pdf"> Problem Set 2</a> <br/>
+
+					<span class="sidebaricon glyphicon glyphicon-file" aria-hidden="true"></span>
+					<a href="pdfs/15 ProblemSet3.pdf"> Problem Set 3</a> <br/>
+
+					<span class="sidebaricon glyphicon glyphicon-file" aria-hidden="true"></span>
+					<a href="pdfs/23 ProblemSet4.pdf"> Problem Set 4</a> <br/>
+
+					<span class="sidebaricon glyphicon glyphicon-file" aria-hidden="true"></span>
+					<a href="pdfs/32 ProblemSet5.pdf"> Problem Set 5</a> <br/>
+
+					<span class="sidebaricon glyphicon glyphicon-file" aria-hidden="true"></span>
+					<a href="pdfs/38 ProblemSet6.pdf"> Problem Set 6</a>
+					
+				</div>
+				<hr/>
+
+				<div>
+				<p class="subtleHeading">EXAMS</p>
+					<p>
+						Midterm<br/>
+						<span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>Tuesday, May 3rd<br/>
+						<span class="sidebaricon glyphicon glyphicon-home" aria-hidden="true"></span>Last name &lt; M: 320-105<br/>
+						<span class="sidebaricon glyphicon glyphicon-home" aria-hidden="true"></span>Last name &ge; M: 420-040<br/>
+						<span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true"></span> 7-9pm
+					</p>
+					<p>
+						Final<br/>
+						<span class="sidebaricon glyphicon glyphicon-calendar" aria-hidden="true"></span>
+						Monday, June 6th<br/>
+						<span class="sidebaricon glyphicon glyphicon-home" aria-hidden="true"></span> Cemex Aud.<br/>
+						<span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true"></span> 3:30-6:30pm
+					</p>
+				</div>
+				<hr/>
+
+				<p class="subtleHeading">Staff</p>
+
+				<span class="sidebaricon glyphicon glyphicon-envelope" aria-hidden="true"></span> cs109@cs.stanford.edu<br/>
+
+
+				<a href="handouts/staff.html">
+					<img src="img/people/staff.png" style="width:100%;margin-top:5px" class="img-responsive"></img>
+				</a>
+				<hr/>
+
+					
+
+				<!-- Handouts 
+				<div>
+					<p class="subtleHeading">HANDOUTS</p>
+
+					<a href="">1. Syllabus</a><br/>
+					<a href="">2. Class Placement</a><br/>
+					<a href="">3. Honor Code</a><br/>
+				</div>-->
+
+
+
+				<p class="subtleHeading">Professor</p>
+				<div class="staffBox">
+					<!--<img src="img/people/chris.bmp" class="staffImg"></img><br/>-->
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a> <br/>
+					<span class="sidebaricon glyphicon glyphicon-envelope" aria-hidden="true"></span> piech@cs.stanford.edu<br/>
+					<span class="sidebaricon glyphicon glyphicon-home" aria-hidden="true"></span> Gates 193<br/>
+					<span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true"></span> Thur 2-4pm
+				</div>
+
+				
+				
+				<!--<div class="staffBox">
+					<img src="img/people/megan.jpeg" class="staffImg"></img><br/>
+					Head TA: Megan Faulk<br/>
+					<span class="sidebaricon glyphicon glyphicon-envelope" aria-hidden="true"></span> mfaulk@stanford.edu<br/>
+					<span class="sidebaricon glyphicon glyphicon-home" aria-hidden="true"></span> Gates B02<br/>
+					<span class="sidebaricon glyphicon glyphicon-time" aria-hidden="true"></span> Tue, Th 9:00-10:30am 
+				</div>-->
+
+				<div style="height:10px"></div>
+
+				<hr/>
+				
+			</div>
+			<div class="col-sm-9" >
+				<!-- Newsfeed -->
+				<div>
+
+					<div class="well">
+                    <div class="newsfeedHeader">
+                        <div class="newsfeedTitle">What is CS109?</div>
+                        <div class="moment">2017040300</div>
+                    </div>
+
+                    <p>
+                        We put together some handouts to help you understand where we are going to go in CS109 and how we plan to get there. See the <span class="glyphicon glyphicon-apple" aria-hidden="true"></span> <a href="handouts/1 - General Information.pdf">General Information</a> handout for details on logistics.
+                    </p>
+
+                    <p>
+                     The <span class="glyphicon glyphicon-th-large" aria-hidden="true" title="pdf"></span> <a href="schedule.html">Course Schedule</a> page shows you the topics that we are going to cover in CS109 and the corresponding readings. We will also post lecture slides and lecture code on the schedule page.
+                    
+                    </p>
+
+                </div>
+
+                
+
+                <div class="well">
+                    <div class="newsfeedHeader">
+                        <div class="newsfeedTitle">Welcome</div>
+                        <div class="moment">2017040300</div>
+                    </div>
+
+                    <p>
+                    Welcome to CS109! We are looking forward to a fun quarter. Class starts Monday April 3rd at 10:30am in NVIDIA Auditorium.
+                    <div class="mapOverlay" onClick="style.pointerEvents='none'"></div>
+                    <div class="google-maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6336.765926432077!2d-122.1777065!3d37.4280569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb2ac97723cb%3A0xa6e8fc1a7a5f2c29!2snvidia+auditorium!5e0!3m2!1sen!2smy!4v1482377431627" width="567" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                    </div>
+                    </p>
+
+                </div>>
+					
+
+				</div>
+			</div>
+		</div>
+
+
+
+<div class="row">
+	<div class="col-md-12">
+		<hr>
+
+		<div class="footer">
+			<p class="pull-left">
+				&#169; Stanford 2016 &#124; Created by 
+				<a href="http://stanford.edu/~cpiech">Chris</a>.
+				CS109 has been developed by many talented teachers. Special thanks to Mehran Sahami.
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74362126-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+	</div>
+
+	<!--<script>
+		var BOTTOM_POS = 0;
+		var INFO_COL = null;
+
+		window.onload = function() {
+			// inforCol_absBottomY - screen_height
+			//var infoTop = document.getElementById("infoCol").getBoundingClientRect().top;
+			//var infoHeight = $("#infoCol").height()
+			//BOTTOM_POS = infoTop + infoHeight - screen.height;
+			INFO_COL = $('#infoCol')
+		}
+
+		window.onscroll = function () {
+			// point at which I want to start scrolling is about 866
+			// offset from the scroll top is about 875
+			var topPos = $(document.body).scrollTop() - 875;
+			//console.log($(document.body).scrollTop())
+			INFO_COL.css({"position" : "relative", "top" : topPos});
+		};
+	</script>-->
+
+	<script type="text/javascript">
+		$( ".moment" ).each(function( i ) {
+			var date = $(this).html()
+
+			var fromStr = moment(date, "YYYYMMDDHH").fromNow()
+
+			$(this).html(fromStr)
+		  });
+		//alert(moment("20160101", "YYYYMMDD").fromNow())
+	</script>
+
+	<script>
+	    $.get("http://ipinfo.io", function(response) {
+	    	console.log(response);
+	    	if(!(response.region === 'California')) {
+	    		$('#myModal').modal()
+	    	} 
+	    	
+		}, "jsonp");
+	</script>
+
+	
+
+</body>

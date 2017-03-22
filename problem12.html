@@ -1,0 +1,322 @@
+<head>
+
+<title>CS109</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+<link href="plugins/bootstrap-custom/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Java Script -->
+<script src="plugins/jquery.min.js"></script>
+<script src="plugins/moment.min.js"></script>
+<script src="plugins/bootstrap-custom/js/bootstrap.min.js"></script>
+<script src="plugins/ace/ace.js" type="text/javascript"></script>
+
+<!-- Probability Packages -->
+<script src="plugins/probability/gaussian.js"></script>
+<script src="plugins/color.js"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.1.0/math.min.js"></script>
+	<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="">CS109</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+          </ul>
+        </li>-->
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lecture Notes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="pdfs/02 Counting.pdf">2 - Counting</a></li>
+            <li><a href="pdfs/03 CalculationRef.pdf">3 - Calculation Ref</a></li>
+            <li><a href="pdfs/05 Combinatorics.pdf">5 - Combinatorics</a></li>
+            <li><a href="pdfs/06 Probability.pdf">6 - Probability</a></li>
+            <li><a href="pdfs/07 CondProbability.pdf">7 - Conditional Probability</a></li>
+            <li><a href="pdfs/08 Independence.pdf">8 - Independence</a></li>
+            <li><a href="pdfs/10 Random Variables.pdf">10 - Random Variables</a></li>
+            <li><a href="pdfs/11 Variance.pdf">11 - Variance</a></li>
+            <li><a href="pdfs/12 Poisson.pdf">12 - Poisson and More</a></li>
+
+            <li><a href="pdfs/13 Continuous.pdf">13 - Continuous RV</a></li>
+            <li><a href="pdfs/16 Gaussian.pdf">16 - Gaussian</a></li>
+            <li><a href="pdfs/17 StandardNormalTable.pdf">17 - Standard Normal</a></li>
+            <li><a href="pdfs/18 Joint.pdf">18 - Joint Distributions</a></li>
+            <li><a href="pdfs/19 MoreJointProperties.pdf">19 - More Joint Properties</a></li>
+            <li><a href="pdfs/20 ConvolutionAndConditional.pdf">20 - Convolution and Conditional</a></li>
+            <li><a href="pdfs/22 Beta.pdf">22 - Beta Distributions</a></li>
+            <li><a href="pdfs/27 VarianceFromEvents.pdf">27 - Variance From Events</a></li>
+            <li><a href="pdfs/28 CovarianceAndSamples.pdf">28 - Covariance and Samples</a></li>
+            <li><a href="pdfs/29 Correlation.pdf">29 - Correlation</a></li>
+            <li><a href="pdfs/30 CondExpectation.pdf">30 - Conditional Expectation</a></li>
+            <li><a href="pdfs/31 CentralTheorems.pdf">31 - Central Theorems</a></li>
+            <li><a href="pdfs/34 ParameterEstimation.pdf">34 - Parameter Estimation</a></li>
+            <li><a href="pdfs/35 MaximumLikelihood.pdf">35 - Maximum Likelihood</a></li>
+            <li><a href="pdfs/37 MaximumAPosteriori.pdf">37 - Maximum A Posteriori</a></li>
+
+            <li><a href="pdfs/39 NaiveBayes.pdf">39 - Naive Bayes</a></li>
+
+            <li><a href="pdfs/40 LogisticRegression.pdf">40 - Logistic Regression</a></li>
+            <li><a href="pdfs/41 DeepLearning.pdf">41 - Deep Learning</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Problem Sets<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="pdfs/04 ProblemSet1.pdf">Problem Set 1</a></li>
+            <li><a href="pdfs/09 ProblemSet2.pdf">Problem Set 2</a></li>
+            <li><a href="pdfs/15 ProblemSet3.pdf">Problem Set 3</a></li>
+            <li><a href="pdfs/23 ProblemSet4.pdf">Problem Set 4</a></li>
+            <li><a href="pdfs/32 ProblemSet5.pdf">Problem Set 5</a></li>
+            <li><a href="pdfs/38 ProblemSet6.pdf">Problem Set 6</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <li><a href="pdfs/01 Administrivia.pdf">Administrivia</a></li>
+           <!--<li><a href="pdfs/01 Administrivia.pdf">Lecture Notes Errata</a></li>-->
+           <li><a href="pdfs/17 StandardNormalTable.pdf">Standard Normal (Phi)</a></li>
+           <li><a href="pdfs/21 PracticeMidterm.pdf">Practice Midterm</a></li>
+           <li><a href="pdfs/24 PracticeMidtermSoln.pdf">Practice Midterm Soln</a></li>
+           <li><a href="pdfs/26 MidtermReviewSession.pdf">Midterm Review Session</a></li>
+           <li><a href="pdfs/25 Notation.pdf">Notation Reference</a></li>
+           <li><a href="handouts/videoExamples.html">Video Examples</a></li>
+           <li><a href="problem12.html">Titanic Dataset</a></li>
+           <li><a href="handouts/datasets.html">Machine Learning Datasets</a></li>
+           <li><a href="pdfs/42 PracticeFinal.pdf">Practice Final</a></li>
+           <li><a href="pdfs/43 PracticeFinalSoln.pdf">Practice Final Soln</a></li>
+           <li><a href="handouts/extraProblems.html">Extra Practice Problems</a></li>
+           <!--<li><a href="pdfs/01 Administrivia.pdf">Midterm Info</a></li>-->
+
+          </ul>
+        </li>
+
+
+
+        
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Demos <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="demos/serendipity.html">Serendipity</a></li>
+            <li><a href="demos/naturalBayes.html">Medical Tests</a></li>
+            <li><a href="demos/jurors.html">Representative Juries</a></li>
+            <li><a href="demos/cdf.html">Normal Calculator</a></li>
+            <li><a href="demos/imageDist.html">CS109 Logo</a></li>
+            <li><a href="demos/beta.html">Beta</a></li>
+            <li><a href="demos/likelihood/">Likelihood</a></li>
+           <!--<li><a href=""><i>None yet!</i></a></li>-->
+
+          </ul>
+        </li>
+
+        <li><a href="handouts/staff.html">Office Hours</a></li>
+       
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/handouts/overview.html"><span class="glyphicon glyphicon-apple" aria-hidden="true"></span> Overview</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+	<div class="container">
+			
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<h1>
+						A Titanic Probability
+					</h1>
+					<p>
+						Thanks to Kaggle and encyclopedia-titanica for the dataset. 
+					</p>
+					
+
+				</div>
+				<hr/>
+			</div>
+		</div>
+
+		
+
+		<div class="row">
+			<div class="col-sm-12">
+				<p>
+					This is the last question of <a href="pdfs/HO32 ProblemSet5.pdf">Problem set 5</a>. In this problem you will use real data from the Titanic to calculate conditional probabilities and expectations.
+				</p>
+				
+				<p>
+					<div class="row">
+						<div class="col-sm-6">
+						<iframe width="100%" height="250" src="https://www.youtube.com/embed/3lyiZMeTKIo" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div class="col-sm-6">
+						<iframe width="100%" height="250" src="https://www.youtube.com/embed/ItjXTieWKyI" frameborder="0" allowfullscreen></iframe>
+					</div>
+					</div>
+
+					<center><i>tldr: the ship sinks</i></center>
+				</p>
+
+
+				<div class="row">
+			<div class="col-sm-9">
+				<p>
+					  On April 15, 1912, the largest passenger liner ever made collided with an iceberg during her maiden voyage. When the Titanic sank it killed 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships. 
+One of the reasons that the shipwreck resulted in such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others.
+				</p>
+
+
+
+				
+				
+				<p>
+					The <a href="stuff/titanic.csv">titanic.csv</a> file contains data for 887 of the real Titanic passengers. Each row represents one person. The columns describe different attributes about the person including whether they survived ($S$), their age ($A$), their passenger-class ($C$), their sex ($G$) and the fare they paid ($X$).
+				</p>
+				<p>
+				 [Quetion12] Write a program in C, C++, Java or Python that <b>reads the data file</b> and finds the answers to the following questions:
+					
+				</p>
+
+				<p>
+					<ol type="a">
+						<li>Calculate the conditional probability that a person survives given their sex and passenger-class:<br/>
+							$P(S=\text{ true | } G = \text{female}, C = 1)$<br/>
+						$P(S=\text{ true | } G = \text{female}, C = 2)$<br/>
+						$P(S=\text{ true | } G = \text{female}, C = 3)$<br/>
+						$P(S=\text{ true | } G = \text{male}, C = 1)$<br/>
+						$P(S=\text{ true | } G = \text{male}, C = 2)$<br/>
+						$P(S=\text{ true | } G = \text{male}, C = 3)$</li>
+						<li>What is the probability that a child who is in third class and is 10 years old or younger survives? Since the number of data points that satisfy the condition is small use the "bayesian" approach and represent your probability as a beta distribution. Calculate a belief distribution for: <br/>$S=\text{ true | } A &leq; 10, C = 3$<br/>
+							You can express your answer as a parameterized distribution.</li>
+						<li>How much did people pay to be on the ship? Calculate the expectation of  fare conditioned on passenger-class:<br/>
+							$E[X \text{ | } C = 1]$<br/>
+						$E[X  \text{ | } C = 2]$<br/>
+						$E[X \text{ | } C = 3]$</li>
+				</ol>
+				</p>
+
+				<p>
+					You only have to submit your answers, not your program. As such you <i>could</i> get away with calculating these statistics by hand. Use a program. This is a warm up to problem set 6 where you will write machine learning algorithms (in C, C++, Java or Python) that read data and perform more advanced calculations.  
+				</p>
+
+				<p>
+					Don't know how to create a new project from scratch? Ask a TA or download a <a href="http://web.stanford.edu/class/archive/cs/cs106a/cs106a.1154/projects/BlankProject.zip">blank CS106A Java project</a> or a <a href="http://web.stanford.edu/class/archive/cs/cs106b/cs106b.1164//assnFiles/Blank.zip">blank CS106B C++ project</a>. 
+				</p>
+
+
+				<p>
+					Aside: In making this problem I learned that there were somewhere between 80 and 153 passengers from present day Lebanon (then Ottoman Empire) on the Titanic. That would be 7% of the people aboard. 
+				</p>
+			</div>
+			<div class="col-sm-3">
+
+				<div class="alert alert-info"><b>Update (May/12): </b>We removed commas from the name field in the dataset to make parsing easier.</div>
+
+				<center>
+							<a href="stuff/titanic.csv">Titanic Dataset<br/><span class="glyphicon glyphicon-save-file" aria-hidden="true" style="font-size: 5em;margin-left:5px"></span>
+					</a>
+							</center>
+							<br/><br/>
+							Dataset columns:
+				<ul class="list-group">
+  <li class="list-group-item">0: Survived Indicator</li>
+  <li class="list-group-item">1: Passenger Class</li>
+  <li class="list-group-item">2: Name</li>
+  <li class="list-group-item">3: Sex</li>
+  <li class="list-group-item">4: Age</li>
+  <li class="list-group-item">5: Siblings Aboard</li>
+  <li class="list-group-item">6: Parents Aboard</li>
+  <li class="list-group-item">7: Fare paid in &pound;s</li>
+</ul>
+			</div>
+		</div>
+
+		<hr/>
+
+		<h3>Extensions?</h3>
+		<p>See if you can find something suprising in the dataset. Can you predict p? Can you find interesting correlations?</p>
+
+			</div>
+		</div>
+		
+		
+				
+		
+
+
+	
+
+
+
+<div class="row">
+	<div class="col-md-12">
+		<hr>
+
+		<div class="footer">
+			<p class="pull-left">
+				&#169; Stanford 2016 &#124; Created by 
+				<a href="http://stanford.edu/~cpiech">Chris</a>.
+				CS109 has been developed by many talented teachers. Special thanks to Mehran Sahami.
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74362126-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</div>
+
+	
+
+</body>
