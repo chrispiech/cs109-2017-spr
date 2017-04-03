@@ -28,6 +28,16 @@ code {
     font-weight: bold;
 }
 
+.lectureMaterials {
+  margin-top: 5px;
+}
+
+.inOut {
+  position:absolute;
+  top:130px;
+  color:hsl(0, 0%, 60%);
+}
+
 .mapOverlay {
    background:transparent; 
    position:relative; 
