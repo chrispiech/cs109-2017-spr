@@ -9,7 +9,7 @@ IGNORE_DIRS = [
     'parts'
 ]
 TEMPLATE_DIR = 'templates'
-ROOT = '//web.stanford.edu/class/archive/cs/cs109/cs109.1176/'
+ROOT = '//cs109.stanford.edu/'
 
 # Use the -t flag if you want to compile for local tests
 DEPLOY = not '-t' in sys.argv
